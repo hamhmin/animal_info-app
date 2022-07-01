@@ -1,0 +1,85 @@
+/* style.css */
+@import url('./reset.css');
+
+/* 웹폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap');
+
+/* style 변수 */
+
+:root{
+    --main-color:#3498db;
+}
+
+body{
+    font-family:'Noto Sans KR', sans-serif;
+}
+.container {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+#main-header{
+    width:100%;
+    text-align: center;
+    background-color: var(--main-color);
+    color: #fff;
+    box-shadow: 0 5px 10px #999;
+}
+
+#main-header .title{
+    padding: 10px;
+}
+#main-header .title h1{
+    font-weight: normal;
+    font-size: 20px;
+}
+#gnb ul{
+    display: flex;
+}
+#gnb ul li{
+    /* flex    item (column) */
+    flex:1; /* 1:1 같은 비율 */
+}
+#gnb ul li a{
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+}
+#gnb ul li.on > a{
+    border-bottom: 4px solid #fff;
+}
+#contents .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+#contents .row .col{
+    /* gap 20px 추가한 부분 보정값으로 뺌 */
+    width: calc(50% - 10px);
+    height: 144px;
+    position: relative;
+}
+#contents .row .col img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#contents .row .col .name{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    font-size: 14px;
+    color: #fff;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#contents h2{
+    margin-bottom: 20px;
+}
